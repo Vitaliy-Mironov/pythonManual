@@ -33,6 +33,14 @@ ex_list1.append("!")
 ex_list.extend(range(5))
 print(ex_list)  # [0, 1, 2, 3, 4]
 
+# альтернативный вариант создания списка с генерированными значениями
+ex2_list = [x for x in range(5)]
+print(ex2_list)  # [0, 1, 2, 3, 4]
+
+# в генератор можно добавлять условия
+ex2a_list = [x for x in range(10) if x > 0 and x % 2 == 0]
+print(ex2a_list)  # [2, 4, 6, 8]
+
 # list.insert(i, x) - добавление элемента по индексу
 ex_list1.insert(1, 'old')
 print(ex_list1)  # ['Hello', 'old', 'World', '!']
@@ -58,12 +66,12 @@ ex_list1.clear()
 print(ex_list1)  # []
 
 # list.reverse() - меняет местами элементы списка, переворачивает список
-ex_list2 = [1,2,3,4,5]
+ex_list2 = [1, 2, 3, 4, 5]
 ex_list2.reverse()
 print(ex_list2)  # [5, 4, 3, 2, 1]
 
 # list.copy() - возвращает мелкую копию списка, эквивалент list[:]
-list1 = [1,2,3,4,5]
+list1 = [1, 2, 3, 4, 5]
 list2 = list1.copy()
 list2[2] = 100
 print(list1)  # [1, 2, 3, 4, 5]
